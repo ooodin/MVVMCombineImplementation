@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		BABCFE812579BDD800D8BC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFE802579BDD800D8BC7A /* AppDelegate.swift */; };
 		BABCFE832579BDD800D8BC7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFE822579BDD800D8BC7A /* SceneDelegate.swift */; };
-		BABCFE852579BDD800D8BC7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFE842579BDD800D8BC7A /* ViewController.swift */; };
-		BABCFE882579BDD800D8BC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABCFE862579BDD800D8BC7A /* Main.storyboard */; };
+		BABCFE852579BDD800D8BC7A /* ExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFE842579BDD800D8BC7A /* ExampleListViewController.swift */; };
 		BABCFE8A2579BDDB00D8BC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABCFE892579BDDB00D8BC7A /* Assets.xcassets */; };
 		BABCFE8D2579BDDB00D8BC7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABCFE8B2579BDDB00D8BC7A /* LaunchScreen.storyboard */; };
+		BABCFEA42579C1C200D8BC7A /* ExampleListTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFEA32579C1C200D8BC7A /* ExampleListTableViewSection.swift */; };
+		BABCFEA72579C1ED00D8BC7A /* ExampleListTableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFEA62579C1ED00D8BC7A /* ExampleListTableViewItem.swift */; };
+		BABCFEAB2579C2E400D8BC7A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFEAA2579C2E400D8BC7A /* UITableView.swift */; };
+		BABCFEB02579C41500D8BC7A /* ExampleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFEAF2579C41500D8BC7A /* ExampleListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BABCFE7D2579BDD800D8BC7A /* MVPImplementation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPImplementation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABCFE7D2579BDD800D8BC7A /* MVVMCombineImplementation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMCombineImplementation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABCFE802579BDD800D8BC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BABCFE822579BDD800D8BC7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BABCFE842579BDD800D8BC7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BABCFE872579BDD800D8BC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BABCFE842579BDD800D8BC7A /* ExampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListViewController.swift; sourceTree = "<group>"; };
 		BABCFE892579BDDB00D8BC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BABCFE8C2579BDDB00D8BC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BABCFE8E2579BDDB00D8BC7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BABCFEA32579C1C200D8BC7A /* ExampleListTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListTableViewSection.swift; sourceTree = "<group>"; };
+		BABCFEA62579C1ED00D8BC7A /* ExampleListTableViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListTableViewItem.swift; sourceTree = "<group>"; };
+		BABCFEAA2579C2E400D8BC7A /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		BABCFEAF2579C41500D8BC7A /* ExampleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +46,7 @@
 		BABCFE742579BDD800D8BC7A = {
 			isa = PBXGroup;
 			children = (
-				BABCFE7F2579BDD800D8BC7A /* MVPImplementation */,
+				BABCFE7F2579BDD800D8BC7A /* MVVMCombineImplementation */,
 				BABCFE7E2579BDD800D8BC7A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +54,90 @@
 		BABCFE7E2579BDD800D8BC7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BABCFE7D2579BDD800D8BC7A /* MVPImplementation.app */,
+				BABCFE7D2579BDD800D8BC7A /* MVVMCombineImplementation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BABCFE7F2579BDD800D8BC7A /* MVPImplementation */ = {
+		BABCFE7F2579BDD800D8BC7A /* MVVMCombineImplementation */ = {
 			isa = PBXGroup;
 			children = (
 				BABCFE802579BDD800D8BC7A /* AppDelegate.swift */,
 				BABCFE822579BDD800D8BC7A /* SceneDelegate.swift */,
-				BABCFE842579BDD800D8BC7A /* ViewController.swift */,
-				BABCFE862579BDD800D8BC7A /* Main.storyboard */,
+				BABCFE9F2579C15D00D8BC7A /* Screens */,
+				BABCFE972579BEFF00D8BC7A /* Resources */,
+				BABCFEA92579C2C100D8BC7A /* Extensions */,
+			);
+			path = MVVMCombineImplementation;
+			sourceTree = "<group>";
+		};
+		BABCFE972579BEFF00D8BC7A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				BABCFE892579BDDB00D8BC7A /* Assets.xcassets */,
 				BABCFE8B2579BDDB00D8BC7A /* LaunchScreen.storyboard */,
 				BABCFE8E2579BDDB00D8BC7A /* Info.plist */,
 			);
-			path = MVPImplementation;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BABCFE9F2579C15D00D8BC7A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BABCFEA02579C16F00D8BC7A /* ExampleList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BABCFEA02579C16F00D8BC7A /* ExampleList */ = {
+			isa = PBXGroup;
+			children = (
+				BABCFEA22579C17F00D8BC7A /* Entities */,
+				BABCFEAE2579C40000D8BC7A /* ViewModel */,
+				BABCFEA12579C17900D8BC7A /* View */,
+			);
+			path = ExampleList;
+			sourceTree = "<group>";
+		};
+		BABCFEA12579C17900D8BC7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BABCFE842579BDD800D8BC7A /* ExampleListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BABCFEA22579C17F00D8BC7A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BABCFEA32579C1C200D8BC7A /* ExampleListTableViewSection.swift */,
+				BABCFEA62579C1ED00D8BC7A /* ExampleListTableViewItem.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BABCFEA92579C2C100D8BC7A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BABCFEAA2579C2E400D8BC7A /* UITableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BABCFEAE2579C40000D8BC7A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BABCFEAF2579C41500D8BC7A /* ExampleListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BABCFE7C2579BDD800D8BC7A /* MVPImplementation */ = {
+		BABCFE7C2579BDD800D8BC7A /* MVVMCombineImplementation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BABCFE912579BDDB00D8BC7A /* Build configuration list for PBXNativeTarget "MVPImplementation" */;
+			buildConfigurationList = BABCFE912579BDDB00D8BC7A /* Build configuration list for PBXNativeTarget "MVVMCombineImplementation" */;
 			buildPhases = (
 				BABCFE792579BDD800D8BC7A /* Sources */,
 				BABCFE7A2579BDD800D8BC7A /* Frameworks */,
@@ -82,9 +147,9 @@
 			);
 			dependencies = (
 			);
-			name = MVPImplementation;
+			name = MVVMCombineImplementation;
 			productName = MVPImplementation;
-			productReference = BABCFE7D2579BDD800D8BC7A /* MVPImplementation.app */;
+			productReference = BABCFE7D2579BDD800D8BC7A /* MVVMCombineImplementation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +166,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BABCFE782579BDD800D8BC7A /* Build configuration list for PBXProject "MVPImplementation" */;
+			buildConfigurationList = BABCFE782579BDD800D8BC7A /* Build configuration list for PBXProject "MVVMCombineImplementation" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +179,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BABCFE7C2579BDD800D8BC7A /* MVPImplementation */,
+				BABCFE7C2579BDD800D8BC7A /* MVVMCombineImplementation */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +191,6 @@
 			files = (
 				BABCFE8D2579BDDB00D8BC7A /* LaunchScreen.storyboard in Resources */,
 				BABCFE8A2579BDDB00D8BC7A /* Assets.xcassets in Resources */,
-				BABCFE882579BDD800D8BC7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +201,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BABCFE852579BDD800D8BC7A /* ViewController.swift in Sources */,
+				BABCFEA42579C1C200D8BC7A /* ExampleListTableViewSection.swift in Sources */,
+				BABCFEA72579C1ED00D8BC7A /* ExampleListTableViewItem.swift in Sources */,
+				BABCFE852579BDD800D8BC7A /* ExampleListViewController.swift in Sources */,
 				BABCFE812579BDD800D8BC7A /* AppDelegate.swift in Sources */,
+				BABCFEB02579C41500D8BC7A /* ExampleListViewModel.swift in Sources */,
 				BABCFE832579BDD800D8BC7A /* SceneDelegate.swift in Sources */,
+				BABCFEAB2579C2E400D8BC7A /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BABCFE862579BDD800D8BC7A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BABCFE872579BDD800D8BC7A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BABCFE8B2579BDDB00D8BC7A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -288,12 +348,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XBZ7Y27PRA;
-				INFOPLIST_FILE = MVPImplementation/Info.plist;
+				INFOPLIST_FILE = MVVMCombineImplementation/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wrike.MVPImplementation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooodin.MVVMCombineImplementation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,12 +367,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XBZ7Y27PRA;
-				INFOPLIST_FILE = MVPImplementation/Info.plist;
+				INFOPLIST_FILE = MVVMCombineImplementation/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wrike.MVPImplementation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooodin.MVVMCombineImplementation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,7 +382,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BABCFE782579BDD800D8BC7A /* Build configuration list for PBXProject "MVPImplementation" */ = {
+		BABCFE782579BDD800D8BC7A /* Build configuration list for PBXProject "MVVMCombineImplementation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BABCFE8F2579BDDB00D8BC7A /* Debug */,
@@ -331,7 +391,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BABCFE912579BDDB00D8BC7A /* Build configuration list for PBXNativeTarget "MVPImplementation" */ = {
+		BABCFE912579BDDB00D8BC7A /* Build configuration list for PBXNativeTarget "MVVMCombineImplementation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BABCFE922579BDDB00D8BC7A /* Debug */,
