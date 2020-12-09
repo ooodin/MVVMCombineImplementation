@@ -21,10 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         let window = self.window ?? UIWindow(windowScene: scene)
 
-        let viewController = ExampleListViewController()
-        viewController.viewModel = ExampleListViewModel()
-
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let examplesView = ExamplesAssembly.make()
+        let navigationController = UINavigationController(rootViewController: examplesView)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
 
