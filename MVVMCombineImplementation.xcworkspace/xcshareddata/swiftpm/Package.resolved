@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "RouteComposer",
+        "repositoryURL": "https://github.com/ekazaev/route-composer.git",
+        "state": {
+          "branch": null,
+          "revision": "56acdd3edb110b9400771aa961fa4866d2b6441b",
+          "version": "2.6.4"
+        }
+      },
+      {
         "package": "SnapKit",
         "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
         "state": {

@@ -1,27 +1,26 @@
 //
-//  TableViewController.swift
-//  MVPImplementation
+//  CustomDataSourceViewController.swift
+//  MVVMCombineImplementation
 //
-//  Created by Artem Semavin on 03.12.2020.
+//  Created by Artem Semavin on 09.12.2020.
 //
 
 import UIKit
-import Combine
 import SnapKit
+import Combine
 
-typealias DataSource = UITableViewDiffableDataSource<SectionItem, CellItem>
-typealias Snapshot = NSDiffableDataSourceSnapshot<SectionItem, CellItem>
+private typealias DataSource = CustomDataSource
+private typealias Snapshot = NSDiffableDataSourceSnapshot<CustomDataSourceSection, CustomDataSourceCellItem>
 
-public final class TableViewController: UIViewController {
+final class CustomDataSourceViewController: UIViewController {
 
-    var analytics: TableViewAnalytics?
-    var viewModel: TableViewModel?
+    var viewModel: CustomDataSourceViewModel?
 
     // MARK: - UI
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.register(TableViewCell.self)
+        tableView.register(UITableViewCell.self)
 
         tableView.tableFooterView = UIView()
         tableView.showsVerticalScrollIndicator = false
@@ -43,7 +42,7 @@ public final class TableViewController: UIViewController {
 
     // MARK: - Life cycle
 
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupBindings()
@@ -51,14 +50,10 @@ public final class TableViewController: UIViewController {
         viewModel?.viewDidLoad()
     }
 
-    public override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        analytics?.sendEvent(name: "Table view did appear")
-    }
-
     // MARK: Private
 
     private func setupView() {
+        dataSource.viewModel = viewModel
         tableView.dataSource = dataSource
 
         view.addSubview(tableView)
@@ -87,7 +82,7 @@ public final class TableViewController: UIViewController {
             .store(in: &subscribtions)
     }
 
-    private func update(items: [CellItem]) {
+    private func update(items: [CustomDataSourceCellItem]) {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])
         snapshot.appendItems(items)
@@ -95,18 +90,17 @@ public final class TableViewController: UIViewController {
         dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
     }
 
-    private func configureCell(_ tableView: UITableView, indexPath: IndexPath, item: CellItem) -> UITableViewCell? {
-        let cell: TableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.title = item.title
+    private func configureCell(_ tableView: UITableView, indexPath: IndexPath, item: CustomDataSourceCellItem) -> UITableViewCell? {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.textLabel?.text = item.title
         return cell
     }
 }
 
 // MARK: - UITableViewDelegate
 
-extension TableViewController: UITableViewDelegate {
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+extension CustomDataSourceViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        analytics?.sendEvent(name: "Cell did select at: \(indexPath.row)")
     }
 }

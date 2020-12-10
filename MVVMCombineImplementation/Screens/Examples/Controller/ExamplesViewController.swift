@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 import SnapKit
-import TableViewExample
+import RouteComposer
 
 private typealias DataSource = UITableViewDiffableDataSource<ExamplesSectionItem, ExamplesCellItem>
 private typealias Snapshot = NSDiffableDataSourceSnapshot<ExamplesSectionItem, ExamplesCellItem>
@@ -64,6 +64,7 @@ final class ExamplesViewController: UIViewController {
 
     private func setupBindings() {
         guard let viewModel = viewModel else {
+            assertionFailure()
             return
         }
         viewModel.$title
@@ -102,12 +103,11 @@ extension ExamplesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        //ToDo: Navigation system
-
         switch indexPath.row {
         case 0:
-            let controller = TableViewAssembly.make()
-            navigationController?.pushViewController(controller, animated: true)
+            try? router.navigate(to: ConfigurationHolder.configuration.tableViewScreen, animated: true, completion: nil)
+        case 1:
+            try? router.navigate(to: ConfigurationHolder.configuration.customDataSourceScreen, animated: true, completion: nil)
         default:
             let action = UIAlertAction(title: "Okay", style: .default, handler: nil)
             let alert = UIAlertController(

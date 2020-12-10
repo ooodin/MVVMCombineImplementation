@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import RouteComposer
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -19,14 +19,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = scene as? UIWindowScene else {
             return
         }
-        let window = self.window ?? UIWindow(windowScene: scene)
+        self.window = self.window ?? UIWindow(windowScene: scene)
 
-        let examplesView = ExamplesAssembly.make()
-        let navigationController = UINavigationController(rootViewController: examplesView)
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
+        let navigationController = UINavigationController()
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
 
-        self.window = window
+        try? UIViewController
+            .router
+            .navigate(to: ConfigurationHolder.configuration.examplesScreen, animated: false, completion: nil)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -17,8 +17,7 @@ final class ExamplesViewModel {
         
         items = [
             ExamplesCellItem(id: "0", title: "SPM Screen module"),
-            ExamplesCellItem(id: "1", title: "Table view screen (default data source)"),
-            ExamplesCellItem(id: "2", title: "Table view screen (custom data source)"),
+            ExamplesCellItem(id: "1", title: "Table view screen (custom data source)"),
         ]
     }
 }

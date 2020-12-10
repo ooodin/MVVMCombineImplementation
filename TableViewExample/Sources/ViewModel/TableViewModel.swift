@@ -12,13 +12,23 @@ final class TableViewModel {
     @Published private(set) var title: String?
     @Published private(set) var items: [CellItem] = []
 
+    private let service: TableViewService
+
+    init(service: TableViewService) {
+        self.service = service
+    }
+
     func viewDidLoad() {
         title = "SPM Screen module"
-        
-        items = [
-            CellItem(id: "0", title: "It's custom cell number 1"),
-            CellItem(id: "1", title: "It's custom cell number 2"),
-            CellItem(id: "2", title: "It's custom cell number 3"),
-        ]
+
+        service.getItems { [weak self] models in
+            self?.update(models: models)
+        }
+    }
+
+    private func update(models: [TableViewServiceModel]) {
+        items = models.compactMap {
+            CellItem(id: $0.id, title: $0.title)
+        }
     }
 }

@@ -8,12 +8,11 @@
 import Foundation
 
 public enum TableViewAssembly {
+    public static func make(service: TableViewService, analytics: TableViewAnalytics) -> TableViewController {
+        let viewModel = TableViewModel(service: service)
 
-    //ToDo: Example for external dependency: Routing, Analytics, DataSource, etc.
-
-    public static func make() -> TableViewController {
-        let viewModel = TableViewModel()
         let controller = TableViewController()
+        controller.analytics = analytics
         controller.viewModel = viewModel
 
         return controller

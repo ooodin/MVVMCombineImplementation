@@ -13,6 +13,22 @@
 		BA472B00258081BC003DC07A /* ExamplesCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472AFC258081BC003DC07A /* ExamplesCellItem.swift */; };
 		BA472B0625808418003DC07A /* ExamplesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B0525808418003DC07A /* ExamplesAssembly.swift */; };
 		BA472B1D258087A7003DC07A /* TableViewExample in Frameworks */ = {isa = PBXBuildFile; productRef = BA472B1C258087A7003DC07A /* TableViewExample */; };
+		BA472B2B2581B0F8003DC07A /* CustomDataSourceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B2A2581B0F8003DC07A /* CustomDataSourceAssembly.swift */; };
+		BA472B2E2581B111003DC07A /* CustomDataSourceCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B2D2581B111003DC07A /* CustomDataSourceCellItem.swift */; };
+		BA472B312581B11B003DC07A /* CustomDataSourceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B302581B11B003DC07A /* CustomDataSourceSection.swift */; };
+		BA472B342581B125003DC07A /* CustomDataSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B332581B125003DC07A /* CustomDataSourceViewModel.swift */; };
+		BA472B372581B137003DC07A /* CustomDataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B362581B137003DC07A /* CustomDataSourceViewController.swift */; };
+		BA472B3A2581B2A9003DC07A /* CustomDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B392581B2A9003DC07A /* CustomDataSource.swift */; };
+		BA472B422581B93D003DC07A /* AnyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B412581B93D003DC07A /* AnyService.swift */; };
+		BA472B462581B993003DC07A /* AnyServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B452581B993003DC07A /* AnyServiceModel.swift */; };
+		BA472B4A2581BA5E003DC07A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B492581BA5E003DC07A /* Analytics.swift */; };
+		BA472B502581C195003DC07A /* RouteComposerStatic in Frameworks */ = {isa = PBXBuildFile; productRef = BA472B4F2581C195003DC07A /* RouteComposerStatic */; };
+		BA472B552581C1AC003DC07A /* ConfigurationHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B542581C1AC003DC07A /* ConfigurationHolder.swift */; };
+		BA472B592581C5A9003DC07A /* GenericContextTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B582581C5A9003DC07A /* GenericContextTask.swift */; };
+		BA472B5C2581CA70003DC07A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B5B2581CA70003DC07A /* UIViewController.swift */; };
+		BA472B5F2581CCC5003DC07A /* ExamplesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B5E2581CCC5003DC07A /* ExamplesFactory.swift */; };
+		BA472B632581CCF6003DC07A /* CustomDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B622581CCF6003DC07A /* CustomDataSourceFactory.swift */; };
+		BA472B672581D054003DC07A /* TableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B662581D054003DC07A /* TableViewFactory.swift */; };
 		BABCFE812579BDD800D8BC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFE802579BDD800D8BC7A /* AppDelegate.swift */; };
 		BABCFE832579BDD800D8BC7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFE822579BDD800D8BC7A /* SceneDelegate.swift */; };
 		BABCFE8A2579BDDB00D8BC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABCFE892579BDDB00D8BC7A /* Assets.xcassets */; };
@@ -26,6 +42,21 @@
 		BA472AFB258081BC003DC07A /* ExamplesSectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesSectionItem.swift; sourceTree = "<group>"; };
 		BA472AFC258081BC003DC07A /* ExamplesCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesCellItem.swift; sourceTree = "<group>"; };
 		BA472B0525808418003DC07A /* ExamplesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesAssembly.swift; sourceTree = "<group>"; };
+		BA472B2A2581B0F8003DC07A /* CustomDataSourceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSourceAssembly.swift; sourceTree = "<group>"; };
+		BA472B2D2581B111003DC07A /* CustomDataSourceCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSourceCellItem.swift; sourceTree = "<group>"; };
+		BA472B302581B11B003DC07A /* CustomDataSourceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSourceSection.swift; sourceTree = "<group>"; };
+		BA472B332581B125003DC07A /* CustomDataSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSourceViewModel.swift; sourceTree = "<group>"; };
+		BA472B362581B137003DC07A /* CustomDataSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSourceViewController.swift; sourceTree = "<group>"; };
+		BA472B392581B2A9003DC07A /* CustomDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSource.swift; sourceTree = "<group>"; };
+		BA472B412581B93D003DC07A /* AnyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyService.swift; sourceTree = "<group>"; };
+		BA472B452581B993003DC07A /* AnyServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyServiceModel.swift; sourceTree = "<group>"; };
+		BA472B492581BA5E003DC07A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		BA472B542581C1AC003DC07A /* ConfigurationHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationHolder.swift; sourceTree = "<group>"; };
+		BA472B582581C5A9003DC07A /* GenericContextTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericContextTask.swift; sourceTree = "<group>"; };
+		BA472B5B2581CA70003DC07A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		BA472B5E2581CCC5003DC07A /* ExamplesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesFactory.swift; sourceTree = "<group>"; };
+		BA472B622581CCF6003DC07A /* CustomDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSourceFactory.swift; sourceTree = "<group>"; };
+		BA472B662581D054003DC07A /* TableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewFactory.swift; sourceTree = "<group>"; };
 		BABCFE7D2579BDD800D8BC7A /* MVVMCombineImplementation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMCombineImplementation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABCFE802579BDD800D8BC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BABCFE822579BDD800D8BC7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA472B502581C195003DC07A /* RouteComposerStatic in Frameworks */,
 				BA472B1D258087A7003DC07A /* TableViewExample in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,9 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				BA472B0325808403003DC07A /* Assembly */,
+				BA472AFA258081BC003DC07A /* Entities */,
 				BA472AF6258081BC003DC07A /* ViewModel */,
 				BA472AF8258081BC003DC07A /* Controller */,
-				BA472AFA258081BC003DC07A /* Entities */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -98,6 +130,97 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		BA472B242581B08C003DC07A /* CustomDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B252581B09E003DC07A /* Assembly */,
+				BA472B282581B0B1003DC07A /* Entities */,
+				BA472B262581B0A4003DC07A /* ViewModel */,
+				BA472B272581B0AA003DC07A /* Controller */,
+			);
+			path = CustomDataSource;
+			sourceTree = "<group>";
+		};
+		BA472B252581B09E003DC07A /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B2A2581B0F8003DC07A /* CustomDataSourceAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		BA472B262581B0A4003DC07A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B332581B125003DC07A /* CustomDataSourceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BA472B272581B0AA003DC07A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B392581B2A9003DC07A /* CustomDataSource.swift */,
+				BA472B362581B137003DC07A /* CustomDataSourceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA472B282581B0B1003DC07A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B2D2581B111003DC07A /* CustomDataSourceCellItem.swift */,
+				BA472B302581B11B003DC07A /* CustomDataSourceSection.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BA472B3D2581B909003DC07A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B3F2581B914003DC07A /* AnyService */,
+				BA472B3E2581B90E003DC07A /* Analytics */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BA472B3E2581B90E003DC07A /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B492581BA5E003DC07A /* Analytics.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		BA472B3F2581B914003DC07A /* AnyService */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B452581B993003DC07A /* AnyServiceModel.swift */,
+				BA472B412581B93D003DC07A /* AnyService.swift */,
+			);
+			path = AnyService;
+			sourceTree = "<group>";
+		};
+		BA472B522581C1A1003DC07A /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B612581CCCA003DC07A /* Factories */,
+				BA472B542581C1AC003DC07A /* ConfigurationHolder.swift */,
+				BA472B582581C5A9003DC07A /* GenericContextTask.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		BA472B612581CCCA003DC07A /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B5E2581CCC5003DC07A /* ExamplesFactory.swift */,
+				BA472B622581CCF6003DC07A /* CustomDataSourceFactory.swift */,
+				BA472B662581D054003DC07A /* TableViewFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		BABCFE742579BDD800D8BC7A = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +243,9 @@
 			children = (
 				BABCFE802579BDD800D8BC7A /* AppDelegate.swift */,
 				BABCFE822579BDD800D8BC7A /* SceneDelegate.swift */,
+				BA472B522581C1A1003DC07A /* Routing */,
 				BABCFE9F2579C15D00D8BC7A /* Screens */,
+				BA472B3D2581B909003DC07A /* Services */,
 				BABCFE972579BEFF00D8BC7A /* Resources */,
 				BABCFEA92579C2C100D8BC7A /* Extensions */,
 			);
@@ -141,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				BA472AF5258081BC003DC07A /* Examples */,
+				BA472B242581B08C003DC07A /* CustomDataSource */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -149,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				BABCFEAA2579C2E400D8BC7A /* UITableView.swift */,
+				BA472B5B2581CA70003DC07A /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -171,6 +298,7 @@
 			name = MVVMCombineImplementation;
 			packageProductDependencies = (
 				BA472B1C258087A7003DC07A /* TableViewExample */,
+				BA472B4F2581C195003DC07A /* RouteComposerStatic */,
 			);
 			productName = MVPImplementation;
 			productReference = BABCFE7D2579BDD800D8BC7A /* MVVMCombineImplementation.app */;
@@ -200,6 +328,7 @@
 			);
 			mainGroup = BABCFE742579BDD800D8BC7A;
 			packageReferences = (
+				BA472B4E2581C195003DC07A /* XCRemoteSwiftPackageReference "route-composer" */,
 			);
 			productRefGroup = BABCFE7E2579BDD800D8BC7A /* Products */;
 			projectDirPath = "";
@@ -227,14 +356,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA472B342581B125003DC07A /* CustomDataSourceViewModel.swift in Sources */,
 				BABCFE812579BDD800D8BC7A /* AppDelegate.swift in Sources */,
 				BA472AFD258081BC003DC07A /* ExamplesViewModel.swift in Sources */,
 				BA472AFF258081BC003DC07A /* ExamplesSectionItem.swift in Sources */,
+				BA472B632581CCF6003DC07A /* CustomDataSourceFactory.swift in Sources */,
 				BA472B00258081BC003DC07A /* ExamplesCellItem.swift in Sources */,
 				BA472B0625808418003DC07A /* ExamplesAssembly.swift in Sources */,
 				BA472AFE258081BC003DC07A /* ExamplesViewController.swift in Sources */,
+				BA472B5F2581CCC5003DC07A /* ExamplesFactory.swift in Sources */,
+				BA472B3A2581B2A9003DC07A /* CustomDataSource.swift in Sources */,
+				BA472B672581D054003DC07A /* TableViewFactory.swift in Sources */,
+				BA472B2E2581B111003DC07A /* CustomDataSourceCellItem.swift in Sources */,
 				BABCFE832579BDD800D8BC7A /* SceneDelegate.swift in Sources */,
+				BA472B552581C1AC003DC07A /* ConfigurationHolder.swift in Sources */,
+				BA472B462581B993003DC07A /* AnyServiceModel.swift in Sources */,
+				BA472B2B2581B0F8003DC07A /* CustomDataSourceAssembly.swift in Sources */,
+				BA472B592581C5A9003DC07A /* GenericContextTask.swift in Sources */,
+				BA472B5C2581CA70003DC07A /* UIViewController.swift in Sources */,
+				BA472B312581B11B003DC07A /* CustomDataSourceSection.swift in Sources */,
+				BA472B422581B93D003DC07A /* AnyService.swift in Sources */,
 				BABCFEAB2579C2E400D8BC7A /* UITableView.swift in Sources */,
+				BA472B372581B137003DC07A /* CustomDataSourceViewController.swift in Sources */,
+				BA472B4A2581BA5E003DC07A /* Analytics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,10 +575,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		BA472B4E2581C195003DC07A /* XCRemoteSwiftPackageReference "route-composer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ekazaev/route-composer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		BA472B1C258087A7003DC07A /* TableViewExample */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TableViewExample;
+		};
+		BA472B4F2581C195003DC07A /* RouteComposerStatic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA472B4E2581C195003DC07A /* XCRemoteSwiftPackageReference "route-composer" */;
+			productName = RouteComposerStatic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
