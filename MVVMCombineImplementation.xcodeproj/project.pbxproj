@@ -24,7 +24,7 @@
 		BA472B462581B993003DC07A /* AnyServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B452581B993003DC07A /* AnyServiceModel.swift */; };
 		BA472B4A2581BA5E003DC07A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B492581BA5E003DC07A /* Analytics.swift */; };
 		BA472B502581C195003DC07A /* RouteComposerStatic in Frameworks */ = {isa = PBXBuildFile; productRef = BA472B4F2581C195003DC07A /* RouteComposerStatic */; };
-		BA472B552581C1AC003DC07A /* ConfigurationHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B542581C1AC003DC07A /* ConfigurationHolder.swift */; };
+		BA472B552581C1AC003DC07A /* GeneralFlows.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B542581C1AC003DC07A /* GeneralFlows.swift */; };
 		BA472B592581C5A9003DC07A /* GenericContextTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B582581C5A9003DC07A /* GenericContextTask.swift */; };
 		BA472B5C2581CA70003DC07A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B5B2581CA70003DC07A /* UIViewController.swift */; };
 		BA472B5F2581CCC5003DC07A /* ExamplesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472B5E2581CCC5003DC07A /* ExamplesFactory.swift */; };
@@ -51,7 +51,7 @@
 		BA472B412581B93D003DC07A /* AnyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyService.swift; sourceTree = "<group>"; };
 		BA472B452581B993003DC07A /* AnyServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyServiceModel.swift; sourceTree = "<group>"; };
 		BA472B492581BA5E003DC07A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
-		BA472B542581C1AC003DC07A /* ConfigurationHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationHolder.swift; sourceTree = "<group>"; };
+		BA472B542581C1AC003DC07A /* GeneralFlows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralFlows.swift; sourceTree = "<group>"; };
 		BA472B582581C5A9003DC07A /* GenericContextTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericContextTask.swift; sourceTree = "<group>"; };
 		BA472B5B2581CA70003DC07A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		BA472B5E2581CCC5003DC07A /* ExamplesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesFactory.swift; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 			children = (
 				BABAF150258B5FF00082B2E7 /* Common */,
 				BA472B612581CCCA003DC07A /* Factories */,
-				BA472B542581C1AC003DC07A /* ConfigurationHolder.swift */,
+				BA472B542581C1AC003DC07A /* GeneralFlows.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -378,7 +378,7 @@
 				BA472B672581D054003DC07A /* TableViewFactory.swift in Sources */,
 				BA472B2E2581B111003DC07A /* CustomDataSourceCellItem.swift in Sources */,
 				BABCFE832579BDD800D8BC7A /* SceneDelegate.swift in Sources */,
-				BA472B552581C1AC003DC07A /* ConfigurationHolder.swift in Sources */,
+				BA472B552581C1AC003DC07A /* GeneralFlows.swift in Sources */,
 				BA472B462581B993003DC07A /* AnyServiceModel.swift in Sources */,
 				BA472B2B2581B0F8003DC07A /* CustomDataSourceAssembly.swift in Sources */,
 				BA472B592581C5A9003DC07A /* GenericContextTask.swift in Sources */,
