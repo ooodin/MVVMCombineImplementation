@@ -1,5 +1,5 @@
 //
-//  ConfigurationHolder.swift
+//  GeneralFlows.swift
 //  MVVMCombineImplementation
 //
 //  Created by Artem Semavin on 09.12.2020.
