@@ -15,8 +15,6 @@ private typealias Snapshot = NSDiffableDataSourceSnapshot<ExamplesSectionItem, E
 
 final class ExamplesViewController: UIViewController {
 
-    var viewModel: ExamplesViewModel?
-
     // MARK: - UI
 
     private lazy var tableView: UITableView = {
@@ -39,7 +37,19 @@ final class ExamplesViewController: UIViewController {
         return dataSource
     }()
 
+    private let viewModel: ExamplesViewModel
     private var subscribtions = Set<AnyCancellable>()
+
+    // MARK: - Initializers
+
+    init(viewModel: ExamplesViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - Life cycle
 
@@ -48,7 +58,7 @@ final class ExamplesViewController: UIViewController {
         setupView()
         setupBindings()
 
-        viewModel?.viewDidLoad()
+        viewModel.viewDidLoad()
     }
 
     // MARK: Private
@@ -63,10 +73,6 @@ final class ExamplesViewController: UIViewController {
     }
 
     private func setupBindings() {
-        guard let viewModel = viewModel else {
-            assertionFailure()
-            return
-        }
         viewModel.$title
             .receive(on: RunLoop.main)
             .sink { [weak self] title in
@@ -105,9 +111,9 @@ extension ExamplesViewController: UITableViewDelegate {
 
         switch indexPath.row {
         case 0:
-            try? router.navigate(to: ConfigurationHolder.configuration.tableViewScreen, animated: true, completion: nil)
+            try? router.navigate(to: App.flows.tableViewScreen, animated: true, completion: nil)
         case 1:
-            try? router.navigate(to: ConfigurationHolder.configuration.customDataSourceScreen, animated: true, completion: nil)
+            try? router.navigate(to: App.flows.customDataSourceScreen, animated: true, completion: nil)
         default:
             let action = UIAlertAction(title: "Okay", style: .default, handler: nil)
             let alert = UIAlertController(

@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         try? UIViewController
             .router
-            .navigate(to: ConfigurationHolder.configuration.examplesScreen, animated: false, completion: nil)
+            .navigate(to: App.flows.examplesScreen, animated: false, completion: nil)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

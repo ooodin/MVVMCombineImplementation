@@ -9,9 +9,7 @@ import Foundation
 
 enum ExamplesAssembly {
     static func make() -> ExamplesViewController {
-        let viewController = ExamplesViewController()
-        viewController.viewModel = ExamplesViewModel()
-
-        return viewController
+        let viewModel = ExamplesViewModel()
+        return ExamplesViewController(viewModel: viewModel)
     }
 }

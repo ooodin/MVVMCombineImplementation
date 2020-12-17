@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA314E01258A05CB00C4E7A6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BA314E00258A05CB00C4E7A6 /* SnapKit */; };
 		BA472AFD258081BC003DC07A /* ExamplesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472AF7258081BC003DC07A /* ExamplesViewModel.swift */; };
 		BA472AFE258081BC003DC07A /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472AF9258081BC003DC07A /* ExamplesViewController.swift */; };
 		BA472AFF258081BC003DC07A /* ExamplesSectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA472AFB258081BC003DC07A /* ExamplesSectionItem.swift */; };
@@ -33,7 +34,6 @@
 		BABCFE832579BDD800D8BC7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFE822579BDD800D8BC7A /* SceneDelegate.swift */; };
 		BABCFE8A2579BDDB00D8BC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABCFE892579BDDB00D8BC7A /* Assets.xcassets */; };
 		BABCFE8D2579BDDB00D8BC7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABCFE8B2579BDDB00D8BC7A /* LaunchScreen.storyboard */; };
-		BABCFEAB2579C2E400D8BC7A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABCFEAA2579C2E400D8BC7A /* UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +63,6 @@
 		BABCFE892579BDDB00D8BC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BABCFE8C2579BDDB00D8BC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BABCFE8E2579BDDB00D8BC7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BABCFEAA2579C2E400D8BC7A /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA314E01258A05CB00C4E7A6 /* SnapKit in Frameworks */,
 				BA472B502581C195003DC07A /* RouteComposerStatic in Frameworks */,
 				BA472B1D258087A7003DC07A /* TableViewExample in Frameworks */,
 			);
@@ -204,9 +204,9 @@
 		BA472B522581C1A1003DC07A /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				BABAF150258B5FF00082B2E7 /* Common */,
 				BA472B612581CCCA003DC07A /* Factories */,
 				BA472B542581C1AC003DC07A /* ConfigurationHolder.swift */,
-				BA472B582581C5A9003DC07A /* GenericContextTask.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -219,6 +219,14 @@
 				BA472B662581D054003DC07A /* TableViewFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		BABAF150258B5FF00082B2E7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BA472B582581C5A9003DC07A /* GenericContextTask.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BABCFE742579BDD800D8BC7A = {
@@ -274,7 +282,6 @@
 		BABCFEA92579C2C100D8BC7A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BABCFEAA2579C2E400D8BC7A /* UITableView.swift */,
 				BA472B5B2581CA70003DC07A /* UIViewController.swift */,
 			);
 			path = Extensions;
@@ -299,6 +306,7 @@
 			packageProductDependencies = (
 				BA472B1C258087A7003DC07A /* TableViewExample */,
 				BA472B4F2581C195003DC07A /* RouteComposerStatic */,
+				BA314E00258A05CB00C4E7A6 /* SnapKit */,
 			);
 			productName = MVPImplementation;
 			productReference = BABCFE7D2579BDD800D8BC7A /* MVVMCombineImplementation.app */;
@@ -329,6 +337,7 @@
 			mainGroup = BABCFE742579BDD800D8BC7A;
 			packageReferences = (
 				BA472B4E2581C195003DC07A /* XCRemoteSwiftPackageReference "route-composer" */,
+				BA314DFF258A05CA00C4E7A6 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = BABCFE7E2579BDD800D8BC7A /* Products */;
 			projectDirPath = "";
@@ -376,7 +385,6 @@
 				BA472B5C2581CA70003DC07A /* UIViewController.swift in Sources */,
 				BA472B312581B11B003DC07A /* CustomDataSourceSection.swift in Sources */,
 				BA472B422581B93D003DC07A /* AnyService.swift in Sources */,
-				BABCFEAB2579C2E400D8BC7A /* UITableView.swift in Sources */,
 				BA472B372581B137003DC07A /* CustomDataSourceViewController.swift in Sources */,
 				BA472B4A2581BA5E003DC07A /* Analytics.swift in Sources */,
 			);
@@ -576,6 +584,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BA314DFF258A05CA00C4E7A6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.1;
+			};
+		};
 		BA472B4E2581C195003DC07A /* XCRemoteSwiftPackageReference "route-composer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ekazaev/route-composer.git";
@@ -587,6 +603,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BA314E00258A05CB00C4E7A6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA314DFF258A05CA00C4E7A6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		BA472B1C258087A7003DC07A /* TableViewExample */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TableViewExample;

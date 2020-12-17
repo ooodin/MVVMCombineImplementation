@@ -14,8 +14,6 @@ private typealias Snapshot = NSDiffableDataSourceSnapshot<CustomDataSourceSectio
 
 final class CustomDataSourceViewController: UIViewController {
 
-    var viewModel: CustomDataSourceViewModel?
-
     // MARK: - UI
 
     private lazy var tableView: UITableView = {
@@ -39,6 +37,18 @@ final class CustomDataSourceViewController: UIViewController {
     }()
 
     private var subscribtions = Set<AnyCancellable>()
+    private let viewModel: CustomDataSourceViewModel
+
+    // MARK: - Initializers
+
+    init(viewModel: CustomDataSourceViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - Life cycle
 
@@ -47,7 +57,7 @@ final class CustomDataSourceViewController: UIViewController {
         setupView()
         setupBindings()
 
-        viewModel?.viewDidLoad()
+        viewModel.viewDidLoad()
     }
 
     // MARK: Private
@@ -63,10 +73,6 @@ final class CustomDataSourceViewController: UIViewController {
     }
 
     private func setupBindings() {
-        guard let viewModel = viewModel else {
-            assertionFailure()
-            return
-        }
         viewModel.$title
             .receive(on: RunLoop.main)
             .sink { [weak self] title in

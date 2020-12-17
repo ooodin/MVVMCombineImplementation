@@ -15,4 +15,4 @@ struct AnyServiceModel {
 
 // MARK: - TableViewServiceModel
 
-extension AnyServiceModel: TableViewServiceModel {}
+extension AnyServiceModel: TableViewExample.ServiceModel {}

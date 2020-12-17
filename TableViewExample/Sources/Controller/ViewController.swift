@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  ViewController.swift
 //  MVPImplementation
 //
 //  Created by Artem Semavin on 03.12.2020.
@@ -8,14 +8,12 @@
 import UIKit
 import Combine
 import SnapKit
+import Common
 
 typealias DataSource = UITableViewDiffableDataSource<SectionItem, CellItem>
 typealias Snapshot = NSDiffableDataSourceSnapshot<SectionItem, CellItem>
 
-public final class TableViewController: UIViewController {
-
-    var analytics: TableViewAnalytics?
-    var viewModel: TableViewModel?
+public final class ViewController: UIViewController {
 
     // MARK: - UI
 
@@ -40,6 +38,21 @@ public final class TableViewController: UIViewController {
     }()
 
     private var subscribtions = Set<AnyCancellable>()
+    private let analytics: Analytics
+    private let viewModel: ViewModel
+
+    // MARK: - Initializers
+
+    init(analytics: Analytics, viewModel: ViewModel) {
+        self.viewModel = viewModel
+        self.analytics = analytics
+
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - Life cycle
 
@@ -48,12 +61,12 @@ public final class TableViewController: UIViewController {
         setupView()
         setupBindings()
 
-        viewModel?.viewDidLoad()
+        viewModel.viewDidLoad()
     }
 
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        analytics?.sendEvent(name: "Table view did appear")
+        analytics.sendEvent(name: "Table view did appear")
     }
 
     // MARK: Private
@@ -68,10 +81,6 @@ public final class TableViewController: UIViewController {
     }
 
     private func setupBindings() {
-        guard let viewModel = viewModel else {
-            assertionFailure()
-            return
-        }
         viewModel.$title
             .receive(on: RunLoop.main)
             .sink { [weak self] title in
@@ -104,9 +113,9 @@ public final class TableViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 
-extension TableViewController: UITableViewDelegate {
+extension ViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        analytics?.sendEvent(name: "Cell did select at: \(indexPath.row)")
+        analytics.sendEvent(name: "Cell did select at: \(indexPath.row)")
     }
 }

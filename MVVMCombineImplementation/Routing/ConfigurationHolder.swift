@@ -9,13 +9,13 @@ import UIKit
 import RouteComposer
 import TableViewExample
 
-protocol ExampleScreenConfiguration {
+protocol GeneralFlows {
     var examplesScreen: DestinationStep<ExamplesViewController, Any?> { get }
     var customDataSourceScreen: DestinationStep<CustomDataSourceViewController, Any?> { get }
-    var tableViewScreen: DestinationStep<TableViewController, Any?> { get }
+    var tableViewScreen: DestinationStep<TableViewExample.ViewController, Any?> { get }
 }
 
-struct ExampleConfiguration: ExampleScreenConfiguration {
+struct GeneralFlowsPhone: GeneralFlows {
     private var rootNavigationController: DestinationStep<UINavigationController, Any?> {
         StepAssembly(
             finder: NilFinder(),
@@ -46,18 +46,17 @@ struct ExampleConfiguration: ExampleScreenConfiguration {
         .assemble(from: examplesScreen.expectingContainer())
     }
 
-    var tableViewScreen: DestinationStep<TableViewController, Any?> {
+    var tableViewScreen: DestinationStep<TableViewExample.ViewController, Any?> {
         StepAssembly(
-            finder: ClassFinder<TableViewController, Any?>(),
+            finder: ClassFinder<TableViewExample.ViewController, Any?>(),
             factory: TableViewFactory()
         )
-        .adding(GenericContextTask<TableViewController, Any?>())
+        .adding(GenericContextTask<TableViewExample.ViewController, Any?>())
         .using(UINavigationController.push())
         .assemble(from: examplesScreen.expectingContainer())
     }
 }
 
-final class ConfigurationHolder {
-    static var configuration: ExampleScreenConfiguration = ExampleConfiguration()
+final class App {
+    static var flows: GeneralFlows = GeneralFlowsPhone()
 }
-

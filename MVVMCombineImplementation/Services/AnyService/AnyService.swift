@@ -14,8 +14,8 @@ final class AnyService {
 
 // MARK: - TableViewService
 
-extension AnyService: TableViewService {
-    func getItems(completion: (([TableViewServiceModel]) -> Void)) {
+extension AnyService: TableViewExample.Service {
+    func getItems(completion: (([TableViewExample.ServiceModel]) -> Void)) {
         completion([
             AnyServiceModel(id: "0", title: "Item1"),
             AnyServiceModel(id: "1", title: "Item2"),

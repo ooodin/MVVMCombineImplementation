@@ -7,14 +7,9 @@
 
 import Foundation
 
-public enum TableViewAssembly {
-    public static func make(service: TableViewService, analytics: TableViewAnalytics) -> TableViewController {
-        let viewModel = TableViewModel(service: service)
-
-        let controller = TableViewController()
-        controller.analytics = analytics
-        controller.viewModel = viewModel
-
-        return controller
+public enum Assembly {
+    public static func make(service: Service, analytics: Analytics) -> ViewController {
+        let viewModel = ViewModel(service: service)
+        return ViewController(analytics: analytics, viewModel: viewModel)
     }
 }

@@ -10,10 +10,10 @@ import RouteComposer
 import TableViewExample
 
 struct TableViewFactory: Factory {
-    typealias ViewController = TableViewController
+    typealias ViewController = TableViewExample.ViewController
     typealias Context = Any?
 
-    func build(with context: Any?) throws -> TableViewController {
-        return TableViewAssembly.make(service: AnyService.shared, analytics: Analytics.shred)
+    func build(with context: Any?) throws -> TableViewExample.ViewController {
+        return TableViewExample.Assembly.make(service: AnyService.shared, analytics: Analytics.shred)
     }
 }

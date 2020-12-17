@@ -15,7 +15,7 @@ final class Analytics {
 
 // MARK: - TableViewAnalytics
 
-extension Analytics: TableViewAnalytics {
+extension Analytics: TableViewExample.Analytics {
     func sendEvent(name: String) {
         os_log(.default, "🐭 %@", name)
     }

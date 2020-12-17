@@ -1,13 +1,13 @@
 //
-//  UITableView.swift
-//  MVPImplementation
+//  File.swift
+//  
 //
-//  Created by Artem Semavin on 03.12.2020.
+//  Created by Artem Semavin on 09.12.2020.
 //
 
-import UIKit.UITableView
+import UIKit
 
-extension UITableView {
+public extension UITableView {
     func register<T>(_ type: T.Type) where T: UITableViewCell {
         let identifier = String(describing: T.self)
         self.register(T.self, forCellReuseIdentifier: identifier)

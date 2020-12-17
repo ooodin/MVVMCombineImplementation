@@ -9,10 +9,8 @@ import Foundation
 
 enum CustomDataSourceAssembly {
     static func make() -> CustomDataSourceViewController {
-        let viewController = CustomDataSourceViewController()
-        viewController.viewModel = CustomDataSourceViewModel()
-
-        return viewController
+        let viewModel = CustomDataSourceViewModel()
+        return CustomDataSourceViewController(viewModel: viewModel)
     }
 }
 
